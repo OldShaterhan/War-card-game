@@ -9,8 +9,8 @@ import { Card } from '../card';
 })
 export class CardsComponent implements OnInit {
   card: Card = {
-    colour = Spade,
-    CardsValueComponent = 2
+    colour: 'Spade',
+    id: 2
   }
 
   constructor() { }
