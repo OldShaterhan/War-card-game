@@ -7,12 +7,10 @@ import { CARDVALUES } from '../mock-values';
   styleUrls: ['./cards-value.component.css']
 })
 export class CardsValueComponent implements OnInit {
-
+  cardvalues = CARDVALUES;
   constructor() { }
 
   ngOnInit() {
-    //cardvalues = CARDVALUES; - without let an error occurs
-    let cardvalues = CARDVALUES;
   }
 
 }

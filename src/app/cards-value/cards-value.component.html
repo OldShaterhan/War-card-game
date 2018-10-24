@@ -1,3 +1,7 @@
-<p>
-  cards-value works!
-</p>
+<h2>Card Values</h2>
+<ul class="cardvalues">
+
+  <li *ngFor="let cardvalue of cardvalues">
+    <span class="badge">{{cardvalue.id}}</span> {{cardvalue.name}}
+  </li>
+</ul>

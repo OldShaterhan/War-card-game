@@ -7,12 +7,11 @@ import { CARDCOLOURS } from '../mock-colours';
   styleUrls: ['./card-colours.component.css']
 })
 export class CardColoursComponent implements OnInit {
-  
+    cardcolours = CARDCOLOURS;
   constructor() { }
 
   ngOnInit() {
-    //cardcolours = CARDCOLOURS; - without let an error occurs
-    let cardcolours = CARDCOLOURS;
+    
   }
 
 }
