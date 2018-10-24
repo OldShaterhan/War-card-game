@@ -4,14 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CardsComponent } from './cards/cards.component';
 import { CardsValueComponent } from './cards-value/cards-value.component';
-import { CardsColourComponent } from './cards-colour/cards-colour.component';
+import { CardColoursComponent } from './card-colours/card-colours.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardsComponent,
     CardsValueComponent,
-    CardsColourComponent
+    CardColoursComponent
   ],
   imports: [
     BrowserModule

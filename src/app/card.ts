@@ -1,7 +1,7 @@
-import { CardsColourComponent } from "./cards-colour/cards-colour.component";
-import { CardsValueComponent } from "./cards-value/cards-value.component";
+//import { CardsColourComponent } from "./card-colours/card-colours.component";
+//import { CardsValueComponent } from "./cards-value/cards-value.component";
 
 export class Card {
-  colour: CardsColourComponent;
-  id: CardsValueComponent;
+  colour: string;
+  value: number;
 }
