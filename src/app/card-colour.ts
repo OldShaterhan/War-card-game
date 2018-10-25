@@ -1,4 +1,3 @@
 export class CardColour {
-  id: number;
-  name: string;
+  suit: string;
 }

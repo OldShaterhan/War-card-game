@@ -1,4 +1,4 @@
 export class CardValue {
-  id: number;
+  value: number;
   name: string;
 }

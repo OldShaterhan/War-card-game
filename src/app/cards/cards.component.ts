@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Card } from '../card';
+import { CardColour } from '../card-colour';
+import { CardValue } from '../card-value';
+import { CardColoursComponent } from '../card-colours/card-colours.component';
 
 @Component({
   selector: 'app-cards',
@@ -8,8 +11,9 @@ import { Card } from '../card';
 })
 export class CardsComponent implements OnInit {
   card: Card = {
-    colour: "Spade",
-    value: 15
+    suit: "Spade",
+    value: 15,
+    name: "test"
   }
 
   constructor() { }
