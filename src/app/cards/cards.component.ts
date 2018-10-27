@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Card } from '../card';
-import { CardColour } from '../card-colour';
+import { CardColor } from '../card-color';
 import { CardValue } from '../card-value';
-import { CardColoursComponent } from '../card-colours/card-colours.component';
+import { CardColorsComponent } from '../card-colors/card-colors.component';
 
 @Component({
   selector: 'app-cards',

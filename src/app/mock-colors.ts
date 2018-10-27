@@ -1,6 +1,6 @@
-import { CardColour } from './card-colour';
+import { CardColor } from './card-color';
 
-export const CARDCOLOURS: CardColour[] = [
+export const CARDCOLORS: CardColor[] = [
   { suit: 'Diamond' },
   { suit: 'Club' },
   { suit: 'Hearts' },
