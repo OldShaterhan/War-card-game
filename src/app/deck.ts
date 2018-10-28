@@ -16,14 +16,25 @@ export class Deck {
         };
         //let item = new Card;
 
-        this.deck.push(item);
+        this._deck.push(item);
       }
     }
-
   }
 
-  shuffle() {
+  shuffle() { //Fisher-Yates shuffle
+    var m = this._deck.length, t, i;
+    // While there remain elements to shuffle…
+    while (m) {
 
+      // Pick a remaining element…
+      i = Math.floor(Math.random() * m--);
+
+      // And swap it with the current element.
+      t = this._deck[m];
+      this._deck[m] = this._deck[i];
+      this._deck[i] = t;
+    }
+    console.log("Ok");
   }
 
   distribute() {

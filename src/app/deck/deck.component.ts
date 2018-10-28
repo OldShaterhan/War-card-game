@@ -17,4 +17,9 @@ export class DeckComponent implements OnInit {
     console.log(this.deck);
   }
 
+  shuffle_click() {
+    this.deck.shuffle();
+    console.log(this.deck);
+  }
+
 }

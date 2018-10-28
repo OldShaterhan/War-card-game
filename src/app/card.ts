@@ -5,10 +5,3 @@ import { CardValue } from "./card-value";
 
 export interface Card extends CardColor, CardValue {
 }
-
-
-/*export class Card implements CardColor, CardValue {
-  suit: string;
-  value: number;
-  name: string;
-}*/

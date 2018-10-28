@@ -1,6 +1,7 @@
-<ul class="deck._deck">
+<ul class="list">
   <li *ngFor="let card of deck._deck">
     Color: {{card.suit}} Value: {{card.value}} Name: {{card.name}}
   </li>
 </ul>
 
+<button class="shufflebtn" mat-raised-button color="primary" (click)="shuffle_click()">Shuffle</button>
