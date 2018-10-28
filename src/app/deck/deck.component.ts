@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CARDVALUES } from '../mock-values'
-import { CARDCOLORS } from '../mock-colors'
+import { Deck } from '../deck';
 
 @Component({
   selector: 'app-deck',
@@ -8,24 +7,9 @@ import { CARDCOLORS } from '../mock-colors'
   styleUrls: ['./deck.component.css']
 })
 export class DeckComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {
-  }
-
-
-  generate() {
-
-    //foreach CARDVALUES
-  }
-
-  shuffle() {
-
-  }
-
-  distribution() {
-
   }
 
 }
