@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src"
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\card-colors",
+    "\\src\\app\\cards",
+    "\\src\\app\\deck"
   ],
+  "SelectedNode": "\\src\\app\\deck.ts",
   "PreviewInSolutionExplorer": false
 }

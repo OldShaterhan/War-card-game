@@ -1,3 +1,6 @@
-<p>
-  deck works!
-</p>
+<ul class="deck._deck">
+  <li *ngFor="let card of deck._deck">
+    Color: {{card.suit}} Value: {{card.value}} Name: {{card.name}}
+  </li>
+</ul>
+

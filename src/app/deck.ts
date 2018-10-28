@@ -3,20 +3,20 @@ import { CARDCOLORS } from './mock-colors'
 import { Card } from './card';
 
 export class Deck {
-  Deck: Card[];
-
-
+  _deck: Card[] = [];
+  //deck = new Array<Card>();
 
   generate() {
-    for (const cardcolor of CARDCOLORS) {
-      for (const cardvalue of CARDVALUES) {
+    for (let cardcolor of CARDCOLORS) {
+      for (let cardvalue of CARDVALUES) {
         let item: Card = {
           suit: cardcolor.suit,
           value: cardvalue.value,
           name: cardvalue.name
         };
+        //let item = new Card;
 
-        this.Deck.push(item);
+        this.deck.push(item);
       }
     }
 

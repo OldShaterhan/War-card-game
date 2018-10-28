@@ -10,11 +10,6 @@ import { CardColorsComponent } from '../card-colors/card-colors.component';
   styleUrls: ['./cards.component.css']
 })
 export class CardsComponent implements OnInit {
-  card: Card = {
-    suit: "Spade",
-    value: 15,
-    name: "test"
-  }
 
   constructor() { }
 

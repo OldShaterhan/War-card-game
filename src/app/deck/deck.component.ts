@@ -7,9 +7,14 @@ import { Deck } from '../deck';
   styleUrls: ['./deck.component.css']
 })
 export class DeckComponent implements OnInit {
+  //deck: Deck;
+
+  deck = new Deck();
   constructor() { }
 
   ngOnInit() {
+    this.deck.generate();
+    console.log(this.deck);
   }
 
 }
