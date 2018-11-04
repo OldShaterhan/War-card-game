@@ -1,6 +1,7 @@
 import { CARDVALUES } from './mock-values'
 import { CARDCOLORS } from './mock-colors'
 import { Card } from './card';
+//import { P1, P2 } from './players'; //common P1, P2 for full deck and player decks
 
 export class Deck {
   _deck: Card[] = [];
@@ -36,7 +37,16 @@ export class Deck {
     }
   }
 
-  distribute() {
-
+//  distribute(P1, P2) {
+  distribute(P1: Deck, P2: Deck) {
+    let tmp: Card;
+    while (this._deck.length > 0) {
+      tmp = this._deck.pop();
+      console.log(tmp);
+      P1._deck.push(tmp);
+      tmp = this._deck.pop();
+      console.log(tmp);
+      P2._deck.push(tmp);
+    }
   }
 }

@@ -1,7 +1,11 @@
-<ul class="list">
-  <li *ngFor="let card of deck._deck">
-    Color: {{card.suit}} Value: {{card.value}} Name: {{card.name}}
-  </li>
-</ul>
+<div *ngIf="deck._deck.length>0">
+  <mat-list>
+    <mat-list-item *ngFor="let card of deck._deck">
+      <p mat-line>Color: {{card.suit}} Value: {{card.value}} Name: {{card.name}}</p>
+</mat-list-item>
+  </mat-list>
 
-<button class="shufflebtn" mat-raised-button color="primary" (click)="shuffle_click()">Shuffle</button>
+  <button *ngIf="!shuffled" class="shufflebtn" mat-raised-button color="primary" (click)="shuffle_click()">Shuffle</button>
+
+  <button *ngIf="shuffled" class="shufflebtn" mat-raised-button color="warn" (click)="distribute_click()">Distribute</button>
+</div>
