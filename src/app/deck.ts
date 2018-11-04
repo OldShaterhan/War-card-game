@@ -34,7 +34,6 @@ export class Deck {
       this._deck[m] = this._deck[i];
       this._deck[i] = t;
     }
-    console.log("Ok");
   }
 
   distribute() {
