@@ -5,8 +5,9 @@
     "\\src\\app",
     "\\src\\app\\card-colors",
     "\\src\\app\\cards",
-    "\\src\\app\\deck"
+    "\\src\\app\\deck",
+    "\\src\\app\\players-deck"
   ],
-  "SelectedNode": "\\src\\app\\deck.ts",
+  "SelectedNode": "\\src\\app\\cards-value",
   "PreviewInSolutionExplorer": false
 }

@@ -1,0 +1,11 @@
+#P1div {
+  width: 50%;
+  background: red;
+  float: left;
+}
+
+#P2div {
+  width: 50%;
+  margin-left: 50%;
+  background: #ADD8E6;
+}

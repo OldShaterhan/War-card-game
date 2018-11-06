@@ -1,7 +1,6 @@
 import { CARDVALUES } from './mock-values'
 import { CARDCOLORS } from './mock-colors'
 import { Card } from './card';
-//import { P1, P2 } from './players'; //common P1, P2 for full deck and player decks
 
 export class Deck {
   _deck: Card[] = [];

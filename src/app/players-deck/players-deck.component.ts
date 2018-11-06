@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Deck } from '../deck';
-import { P1, P2 } from '../players'; //common P1, P2 for full deck and player decks
 
 @Component({
   selector: 'app-players-deck',
@@ -8,6 +7,10 @@ import { P1, P2 } from '../players'; //common P1, P2 for full deck and player de
   styleUrls: ['./players-deck.component.css']
 })
 export class PlayersDeckComponent implements OnInit {
+  @Input() P1: Deck;
+  @Input() P2: Deck;
+
+  displayedColumns: string[] = ['name', 'suit'];
   //P1 = new Deck();
   //P2 = new Deck();
   //P1: Deck;
