@@ -1,4 +1,4 @@
-<div *ngIf="P1._deck.length>0 && P2._deck.length>0">
+<div *ngIf="distributed">
   <div id="P1div">
     <mat-list>
       <mat-list-item *ngFor="let card of P1._deck">
@@ -16,7 +16,8 @@
 
 
 
-  <button *ngIf="!shuffled" class="shufflebtn" mat-raised-button color="primary" (click)="shuffle_click()">Shuffle</button>
+  <button *ngIf="!playclicked" class="playbtn" mat-raised-button color="primary" (click)="play_click()">Play</button>
+  <mat-checkbox *ngIf="playclicked">Play continously</mat-checkbox>
 </div>
 
 <!--<table mat-table class="mat-elevation-z8">

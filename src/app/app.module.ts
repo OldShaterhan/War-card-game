@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatListModule, MatTableModule } from '@angular/material';
+import { MatButtonModule, MatListModule, MatTreeModule, MatCheckboxModule } from '@angular/material';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -24,7 +24,8 @@ import { PlayersDeckComponent } from './players-deck/players-deck.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatListModule,
-    MatTableModule
+    MatTreeModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

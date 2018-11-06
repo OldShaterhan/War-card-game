@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Deck } from '../deck';
+import { MainDeck } from '../main-deck';
 
 @Component({
   selector: 'app-deck',
@@ -9,10 +10,11 @@ import { Deck } from '../deck';
 export class DeckComponent implements OnInit {
   //deck: Deck;
 
-  deck = new Deck();
+  deck = new MainDeck();
   P1 = new Deck();
   P2 = new Deck();
   private shuffled = 0;
+  distributed = 0;
   constructor() { }
   //constructor(private P1, P2) { }
 
@@ -32,6 +34,7 @@ export class DeckComponent implements OnInit {
     this.deck.distribute(this.P1, this.P2);
     console.log(this.P1);
     console.log(this.P2);
+    this.distributed = 1;
   }
 
 }
