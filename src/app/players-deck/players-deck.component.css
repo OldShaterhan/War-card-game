@@ -10,8 +10,12 @@
   background: #ADD8E6;
 }
 
-
 #buttons {
   margin: auto;
-  width: 40%;
+  width: 30%;
+}
+
+.playbutton {
+  margin: auto;
+  width: 10%;
 }
