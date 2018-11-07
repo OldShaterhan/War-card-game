@@ -1,7 +1,10 @@
 <div *ngIf="deck._deck.length>0">
-  <button *ngIf="!shuffled" class="shufflebtn" mat-raised-button color="primary" (click)="shuffle_click()">Shuffle</button>
+  <div id="buttons">
+    <button *ngIf="!shuffled" class="shufflebtn" mat-raised-button color="primary" (click)="shuffle_click()">Shuffle</button>
 
-  <button *ngIf="shuffled" class="shufflebtn" mat-raised-button color="warn" (click)="distribute_click()">Distribute</button>
+    <button *ngIf="shuffled" class="shufflebtn" mat-raised-button color="warn" (click)="distribute_click()">Distribute</button>
+  </div>
+
 
   <mat-list>
     <mat-list-item *ngFor="let card of deck._deck">

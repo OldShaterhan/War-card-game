@@ -1,29 +1,41 @@
 <div *ngIf="distributed">
   <div>
-    <button *ngIf="!playclicked" class="playbtn" mat-raised-button color="primary" (click)="play_click()">Play</button>
-
+    <div id="buttons">
+      <button *ngIf="!play_cont" class="playbtn" mat-raised-button color="primary" (click)="play_click()">Play continously</button>
+      <button *ngIf="playclicked && play_cont" class="playbtn" mat-raised-button color="warn" (click)="pause_click()">Pause</button>
+      <button *ngIf="!play_cont" class="playbtn" mat-raised-button color="primary" (click)="play_1_round_click()">Play 1 round</button>
+    </div>
     <div *ngIf="playclicked">
-      <mat-checkbox *ngIf="playclicked" class="play-cont">Play continously</mat-checkbox>
-      <!--<button *ngIf="playclicked && play-cont" class="playbtn" mat-raised-button color="primary" (click)="blablabl()">Play 1 tour</button>-->
 
-      <p>
-        Player 1 plays {{game.tmp1.name}} of {{game.tmp1.suit}}s
-      </p>
-      <p>
-        Player 2 plays {{game.tmp2.name}} of {{game.tmp2.suit}}s
-      </p>
-      <h4 *ngIf="game.tmp1.value==game.tmp2.value">WAR!</h4>
+      <div *ngIf="game.round>0">
+        <h3 *ngIf="game.tooks!=0">Player {{game.tooks}} tooks</h3>
+        <div id="P1div">
+          Player 1 plays:
+          <mat-list>
+            <mat-list-item *ngFor="let card of game.tmp1A">
+              <p mat-line>{{card.name}} of {{card.suit}}s</p>
+            </mat-list-item>
+          </mat-list>
+        </div>
+        <div id="P2div">
+          Player 2 plays:
+          <mat-list>
+            <mat-list-item *ngFor="let card of game.tmp2A">
+              <p mat-line>{{card.name}} of {{card.suit}}s</p>
+            </mat-list-item>
+          </mat-list>
+        </div>
+        <h4 *ngIf="game.tmp1A[0].value==game.tmp2A[0].value">WAR!</h4>
+        <h4>{{game.round}} rounds</h4>
 
+        <div *ngIf="game.winner==1||game.winner==2">
+          <h3>Player {{game.winner}} win!</h3>
+        </div>
+        <div *ngIf="game.winner==3">
+          <h3>No winner!</h3>
+        </div>
 
-      <div *ngIf="game.winner==1||game.winner==2">
-        <h3>Player {{game.winner}} win!</h3>
-        <h4>After {{game.round}} rounds</h4>
       </div>
-      <div *ngIf="game.winner==3">
-        <h3>No winner!</h3>
-        <h4>After {{game.round}} rounds</h4>
-      </div>
-
     </div>
   </div>
   <app-game [playclicked]="playclicked"></app-game>
