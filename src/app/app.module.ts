@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatListModule, MatTreeModule, MatCheckboxModule } from '@angular/material';
+import { MatButtonModule, MatListModule, MatTreeModule } from '@angular/material';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -26,8 +26,7 @@ import { GameComponent } from './game/game.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatListModule,
-    MatTreeModule,
-    MatCheckboxModule
+    MatTreeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
