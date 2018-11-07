@@ -9,6 +9,7 @@ import { CardsValueComponent } from './cards-value/cards-value.component';
 import { CardColorsComponent } from './card-colors/card-colors.component';
 import { DeckComponent } from './deck/deck.component';
 import { PlayersDeckComponent } from './players-deck/players-deck.component';
+import { GameComponent } from './game/game.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PlayersDeckComponent } from './players-deck/players-deck.component';
     CardsValueComponent,
     CardColorsComponent,
     DeckComponent,
-    PlayersDeckComponent
+    PlayersDeckComponent,
+    GameComponent
   ],
   imports: [
     BrowserModule,

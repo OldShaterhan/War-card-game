@@ -1,75 +1,47 @@
 <div *ngIf="distributed">
+  <div>
+    <button *ngIf="!playclicked" class="playbtn" mat-raised-button color="primary" (click)="play_click()">Play</button>
+
+    <div *ngIf="playclicked">
+      <mat-checkbox *ngIf="playclicked" class="play-cont">Play continously</mat-checkbox>
+      <!--<button *ngIf="playclicked && play-cont" class="playbtn" mat-raised-button color="primary" (click)="blablabl()">Play 1 tour</button>-->
+
+      <p>
+        Player 1 plays {{game.tmp1.name}} of {{game.tmp1.suit}}s
+      </p>
+      <p>
+        Player 2 plays {{game.tmp2.name}} of {{game.tmp2.suit}}s
+      </p>
+      <h4 *ngIf="game.tmp1.value==game.tmp2.value">WAR!</h4>
+
+
+      <div *ngIf="game.winner==1||game.winner==2">
+        <h3>Player {{game.winner}} win!</h3>
+        <h4>After {{game.round}} rounds</h4>
+      </div>
+      <div *ngIf="game.winner==3">
+        <h3>No winner!</h3>
+        <h4>After {{game.round}} rounds</h4>
+      </div>
+
+    </div>
+  </div>
+  <app-game [playclicked]="playclicked"></app-game>
+
   <div id="P1div">
     <mat-list>
       <mat-list-item *ngFor="let card of P1._deck">
-        <p mat-line>{{card.name}} of {{card.suit}}</p>
+        <p mat-line>{{card.name}} of {{card.suit}}s</p>
       </mat-list-item>
     </mat-list>
   </div>
   <div id="P2div">
     <mat-list>
       <mat-list-item *ngFor="let card of P2._deck">
-        <p mat-line>{{card.name}} of {{card.suit}}</p>
+        <p mat-line>{{card.name}} of {{card.suit}}s</p>
       </mat-list-item>
     </mat-list>
   </div>
 
 
-
-  <button *ngIf="!playclicked" class="playbtn" mat-raised-button color="primary" (click)="play_click()">Play</button>
-  <mat-checkbox *ngIf="playclicked">Play continously</mat-checkbox>
 </div>
-
-<!--<table mat-table class="mat-elevation-z8">
-  <ng-container>
-    <th mat-header-cell> P1 Card </th>
-    <td mat-cell> </td>
-  </ng-container>
-
-  <ng-container>
-    <th mat-header-cell> P2 Card </th>
-    <td mat-cell></td>
-  </ng-container>
-
-  <tr mat-header-row></tr>
-  <tr mat-row>
-    <mat-list>
-      <mat-list-item *ngFor="let card of P1._deck">
-        <p mat-line>Color: {{card.suit}} Value: {{card.value}} Name: {{card.name}}</p>
-      </mat-list-item>
-    </mat-list>
-  </tr>
-  <tr mat-row>
-    <mat-list>
-      <mat-list-item *ngFor="let card of P2._deck">
-        <p mat-line>Color: {{card.suit}} Value: {{card.value}} Name: {{card.name}}</p>
-      </mat-list-item>
-    </mat-list>
-  </tr>
-</table>
--->
-<!--
-
-    <table mat-table [dataSource]="P1&&P2">
-      <ng-container matColumnDef="P1._deck">
-        <th mat-header-cell *matHeaderCellDef>P1 cards</th>
-        <td mat-cell *matCellDef="let card">
-          <p mat-line>{{P1.card.name}} of {{P1.card.suit}} </p>
-        </td>
-      </ng-container>
-
-      <ng-container matColumnDef="P2._deck">
-        <th mat-header-cell *matHeaderCellDef>P2 cards</th>
-        <td mat-cell *matCellDef="let card">
-          <p mat-line>{{card.name}} of {{card.suit}} </p>
-        </td>
-      </ng-container>
-
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-
-    </table>
-
-</div>
-      -->
-
