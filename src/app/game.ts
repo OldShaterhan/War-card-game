@@ -19,7 +19,6 @@ export class Game {
   play_continously;
 
   play(P1: Deck, P2: Deck) {
-    //play_cont =
     this.play_continously = setInterval(() => this.play_1round(P1, P2), 2500);
   }
   
@@ -34,7 +33,6 @@ export class Game {
     if (P1._deck.length > 0 && P2._deck.length > 0) { //no winner at that moment
       this.round++;
       this.x = 0;
-      //setTimeout(()=>this.compare(P1,P2), 1000);
       this.compare(P1, P2, this.x);
     }
 
@@ -43,6 +41,7 @@ export class Game {
       this.winner = 2;
       console.log("P2 wins");
       console.log(P1, P2);
+      clearInterval(this.play_continously);
     }
       
     else if (P2._deck.length == 0) //P1 won
@@ -50,6 +49,7 @@ export class Game {
       this.winner = 1;
       console.log("P1 wins");
       console.log(P1, P2);
+      clearInterval(this.play_continously);
     }
 
     else {
@@ -57,8 +57,6 @@ export class Game {
     }
   }
 
-
-  //do przepisania na czysto - osobne tablice tmp1A i tmp2A do wyświetlania zagranych kart (wyświetlenie kart użytych w wojnie)
   compare(P1: Deck, P2: Deck, _x: number) {
     this.tmp1A.unshift(P1._deck.pop());
     this.tmp2A.unshift(P2._deck.pop());
@@ -67,8 +65,6 @@ export class Game {
       this.tooks = 0;
       _x += 2;
       console.log("x=",_x);
-      //poniższy warunek obecnie nie działa poprawnie - nie sumuje długości talii
-      //do uwzględnienia nowe talie walczące: tmp1A i tmp2A
       if (_x > P1._deck.length + this.tmp1A.length && _x > P2._deck.length + this.tmp2A.length) { //no needed amount of cards for both players - not really possible, but checked
         if (P1._deck[0].value == P2._deck[0].value)
           this.winner = 3; //no winner
