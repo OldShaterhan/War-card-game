@@ -1,18 +1,20 @@
 #P1div {
-  width: 50%;
-  background: red;
+  margin-left: 10%;
+  width: 40%;
+  background: #ff868d;
   float: left;
 }
 
 #P2div {
-  width: 50%;
-  margin-left: 50%;
-  background: #ADD8E6;
+  margin-right: 10%;
+  width: 40%;
+  background: #add8e6;
+  float: right;
 }
 
 #buttons {
   margin: auto;
-  width: 30%;
+  width: 25%;
 }
 
 .playbutton {
