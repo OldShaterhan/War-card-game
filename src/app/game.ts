@@ -20,7 +20,7 @@ export class Game {
 
   play(P1: Deck, P2: Deck) {
     //play_cont =
-    this.play_continously = setInterval(() => this.play_1round(P1, P2), 2000);
+    this.play_continously = setInterval(() => this.play_1round(P1, P2), 2500);
   }
   
   pause() {

@@ -8,6 +8,8 @@
   <div *ngIf="playclicked">
     <div *ngIf="game.round>0">
       <h3 *ngIf="game.tooks!=0">Player {{game.tooks}} tooks</h3>
+      <h3 *ngIf="game.tooks==0">WAR!</h3>
+      <h4>{{game.round}} rounds</h4>
       <div id="P1div">
         <h3>Player 1 plays:</h3>
         <mat-list>
@@ -24,9 +26,6 @@
           </mat-list-item>
         </mat-list>
       </div>
-      <h4 *ngIf="game.tmp1A[0].value==game.tmp2A[0].value">WAR!</h4>
-      <h4>{{game.round}} rounds</h4>
-
       <div *ngIf="game.winner==1||game.winner==2">
         <h3>Player {{game.winner}} win!</h3>
       </div>
