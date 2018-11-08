@@ -1,8 +1,8 @@
 <div>
   <div id="buttons">
-    <button *ngIf="!play_cont" class="playbtn" mat-raised-button color="primary" (click)="play_click()">Play continously</button>
-    <button *ngIf="playclicked && play_cont" class="playbtn" mat-raised-button color="warn" (click)="pause_click()">Pause</button>
-    <button *ngIf="!play_cont" class="playbtn" mat-raised-button color="primary" (click)="play_1_round_click()">Play 1 round</button>
+    <button *ngIf="!play_cont && (P1._deck.length != 0 && P2._deck.length != 0)" class="playbtn" mat-raised-button color="primary" (click)="play_click()">Play continously</button>
+    <button *ngIf="playclicked && play_cont && (P1._deck.length != 0 && P2._deck.length != 0)" class="playbtn" mat-raised-button color="warn" (click)="pause_click()">Pause</button>
+    <button *ngIf="!play_cont && (P1._deck.length != 0 && P2._deck.length != 0)" class="playbtn" mat-raised-button color="primary" (click)="play_1_round_click()">Play 1 round</button>
   </div>
 
   <div *ngIf="playclicked">
