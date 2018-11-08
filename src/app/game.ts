@@ -65,7 +65,7 @@ export class Game {
       this.tooks = 0;
       _x += 2;
       console.log("x=",_x);
-      if (_x > P1._deck.length + this.tmp1A.length && _x > P2._deck.length + this.tmp2A.length) { //no needed amount of cards for both players - not really possible, but checked
+      if (_x+1 > P1._deck.length + this.tmp1A.length && _x+1 > P2._deck.length + this.tmp2A.length) { //no needed amount of cards for both players - not really possible, but checked
         if (P1._deck[0].value == P2._deck[0].value)
           this.winner = 3; //no winner
         else if (P1._deck[0].value > P2._deck[0].value)
@@ -73,11 +73,11 @@ export class Game {
         else //(P1._deck[0].value < P2._deck[0].value)
           this.winner = 2;
       }
-      else if (_x > P1._deck.length + this.tmp1A.length) { //if needed cards od P1 to prepare war is insufficient - no war, P2 wins
+      else if (_x+1 > P1._deck.length + this.tmp1A.length) { //if needed cards od P1 to prepare war is insufficient - no war, P2 wins
         this.winner = 2;
         return 0;
       }
-      else if (_x > P2._deck.length + this.tmp1A.length) { //if needed cards od P2 to prepare war is insufficient - no war, P1 wins
+      else if (_x+1 > P2._deck.length + this.tmp1A.length) { //if needed cards od P2 to prepare war is insufficient - no war, P1 wins
         this.winner = 1;
         return 0;
       }
